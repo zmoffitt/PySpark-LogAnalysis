@@ -10,16 +10,17 @@ has been collected for several days, weeks, or months.
 To prepare these files, the `doTransformations.sh` script uses `jq` to 
 explode the array so that we can import the JSON files on a line-by-line basis.
 
-##Prerequisites
+### Prerequisites
 
 From the command line, verify/install [jq](https://stedolan.github.io/jq/):
-	$ jq
 ```
+$ jq
+
 jq - commandline JSON processor [version 1.5-1-a5b5cbe]
 Usage: jq [options] <jq filter> [file...]
 ```
 
-##Usage
+## Usage
 
 ### Run JSON transformation on insights-logs-dataplanerequests files
 
@@ -27,7 +28,7 @@ These files were available on the HDInsight Cluster already since the Azure Stor
 Blob was made available by scripting the command on each head node. Update the 
 `fileCount` and `filePaths` variables in the `doTransformations.sh` script before executing:
 ```
-	$ sudo sh doTransformation.sh
+$ sudo sh doTransformation.sh
 ```
 and there will be an output similar to:
 ```
@@ -52,9 +53,9 @@ Press any key to continue...
 ### Process data on Spark Cluster
 In the Jupyter (.ipynb) Notebook, there are 18 cells that seperate the execution stages. To run from terminal:
 ```
-	$ ./bin/spark-submit --files LogAnalysis-Master.py
+$ ./bin/spark-submit --files LogAnalysis-Master.py
 ```
 or
 ```
-	$ ./bin/pyspark LogAnalysis-Master.py
+$ ./bin/pyspark LogAnalysis-Master.py
 ```
