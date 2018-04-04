@@ -1,5 +1,5 @@
 # PySpark-LogAnalysis
-#### Cosmos DB (DocumentDB) insights-logs-dataplanerequests Log Processor
+#### Cosmos DB (DocumentDB) Insights Log Processor
 
 The **pyspark-loganalysis** .py script helps to analyze large amounts of
 operational log data written by Cosmos DB (DocumentDB) and Application Insights.
@@ -11,7 +11,8 @@ To prepare these files, the `doTransformations.sh` script uses `jq` to
 explode the array so that we can import the JSON files on a line-by-line basis.
 
 ##Prerequisites
-From the command line, verify/install [jq][https://stedolan.github.io/jq/]:
+
+From the command line, verify/install [jq](https://stedolan.github.io/jq/):
 	$ jq
 ```
 jq - commandline JSON processor [version 1.5-1-a5b5cbe]
@@ -19,12 +20,15 @@ Usage: jq [options] <jq filter> [file...]
 ```
 
 ##Usage
+
 ### Run JSON transformation on insights-logs-dataplanerequests files
+
 These files were available on the HDInsight Cluster already since the Azure Storage
 Blob was made available by scripting the command on each head node. Update the 
 `fileCount` and `filePaths` variables in the `doTransformations.sh` script before executing:
+```
 	$ sudo sh doTransformation.sh
-
+```
 and there will be an output similar to:
 ```
 Enumerating the objects, please wait...
