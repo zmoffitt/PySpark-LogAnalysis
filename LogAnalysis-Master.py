@@ -56,7 +56,6 @@ input4 = sc.textFile(blobPath + 'm=03/d=25/')
 input5 = sc.textFile(blobPath + 'm=03/d=26/')
 input6 = sc.textFile(blobPath + 'm=03/d=27/')
 input7 = sc.textFile(blobPath + 'm=03/d=28/')
-input7 = sc.textFile(blobPath + 'm=03/d=28/')
 input8 = sc.textFile(blobPath + 'm=03/d=29/')
 input9 = sc.textFile(blobPath + 'm=03/d=30/')
 
